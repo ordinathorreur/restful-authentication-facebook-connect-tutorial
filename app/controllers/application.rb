@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   layout 'index'
-  before_filter :set_facebook_session
+  before_filter :create_facebook_session
   helper_method :facebook_session
   
   # Be sure to include AuthenticationSystem in Application Controller instead
